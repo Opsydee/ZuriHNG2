@@ -1,0 +1,19 @@
+@startuml RESTAPI
+
+!define Model <<Model>>
+
+!define << Logical functions >>
+  +createPerson
+  +findPerson
+  +updatePerson
+  +deletePerson
+
+class Person <<Model>> {
+  -name: String
+  -email: String
+  -age: Integer
+}
+
+PersonController --> Person : Uses
+
+@enduml
